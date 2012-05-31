@@ -51,7 +51,7 @@ class Scaffolder::AnnotationLocator < DelegateClass(Array)
   end
 
   def scaffold
-    YAML::ENGINE.yamler = 'syck'
+    YAML::ENGINE.yamler = 'syck' if defined? YAML::ENGINE
     Scaffolder.new(YAML.load(File.read(@scaffold_file)),@sequence_file)
   end
 
