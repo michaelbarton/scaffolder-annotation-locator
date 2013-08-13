@@ -19,14 +19,14 @@ Gem::Specification.new do |s|
   s.files            = `git ls-files`.split("\n")
   s.extra_rdoc_files = %w| LICENSE.txt README.rdoc |
 
-  s.add_dependency "scaffolder", ">= 0.4.3"
+  s.add_dependency "scaffolder", "~> 0.5.0"
   s.add_dependency "bio",        "~> 1.4.0"
 
-  s.add_development_dependency "rake",                    "~> 0.9.0"
-  s.add_development_dependency "bundler",                 "~> 1.1.0"
-  s.add_development_dependency "rspec",                   "~> 2.7.0"
-  s.add_development_dependency "cucumber",                "~> 1.1.4"
-  s.add_development_dependency "aruba",                   "~> 0.4.11"
+  s.add_development_dependency "rake",                    "~> 10.1.0"
+  s.add_development_dependency "bundler",                 "~> 1.3.0"
+  s.add_development_dependency "rspec",                   "~> 2.14.0"
+  s.add_development_dependency "cucumber",                "~> 1.3.0"
+  s.add_development_dependency "aruba",                   "~> 0.5.0"
   s.add_development_dependency "scaffolder-test-helpers", "~> 0.4.0"
-  s.add_development_dependency "yard",                    "~> 0.6.0"
+  s.add_development_dependency "yard",                    "~> 0.8.0"
 end

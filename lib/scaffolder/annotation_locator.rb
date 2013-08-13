@@ -1,6 +1,7 @@
 require 'delegate'
 require 'scaffolder'
 require 'bio'
+require 'yaml'
 
 require 'scaffolder/extensions'
 
