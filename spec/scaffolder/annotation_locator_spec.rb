@@ -3,9 +3,14 @@ require File.expand_path(File.join(File.dirname(__FILE__), '..', 'spec_helper'))
 describe Scaffolder::AnnotationLocator do
 
   def relocate(scaffold,records)
+
+    GC.disable
     @scaffold_file, @sequence_file = generate_scaffold_files(scaffold)
-    described_class.new(@scaffold_file.path, @sequence_file.path,
+    c = described_class.new(@scaffold_file.path, @sequence_file.path,
                         generate_gff3_file(records).path)
+
+    GC.enable
+    c
   end
 
   before do
